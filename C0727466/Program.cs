@@ -10,20 +10,11 @@ using System.Threading.Tasks;
 //Assignment 2
 //March 6-2019
 
-namespace C0727466
-{
-    class proram
-    {
-        static void Main(string[] args)
-        {
-            DelegateExercises a = new DelegateExercises();
-            a.Method2();
-        }
-    }
+namespace DelegateAndEvents
+ {
             public class DelegateExercises
             {
                 public delegate void MyDelegate();
-
                 void Method1()
                 {
                     Console.WriteLine("Method1");
