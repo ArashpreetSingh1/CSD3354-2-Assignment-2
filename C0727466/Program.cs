@@ -6,39 +6,55 @@ using System.Threading.Tasks;
 
 //Student Name:- Arashpreet Singh Student Id:-C0727466
 //student Name:-Navjot Singh Gill Student Id:- C0726409
-//2019W CSD 3354 2
+// CSD 3354 Section 2
 //Assignment 2
 //March 6-2019
 
-namespace DelegateAndEvents
- {
-            public class DelegateExercises
-            {
-                public delegate void MyDelegate();
-                void Method1()
-                {
-                    Console.WriteLine("Method1");
-                    Console.ReadLine();
-
-                }
-                public void Method2()
-                {
-                    MyDelegate myDelegate = new MyDelegate(Method1);
-                    myDelegate(50);
-                }
-            }
-        }
-
 namespace DelegatesAndEvents
 {
-    class Program
+    public class DelegateAndEvents
     {
-        static void Main (string[] args)
-        {
-            // TO DO: Call Method2 from the DelegateExercises Class
+            public delegate int MyDelegate(int intValue);
+
+            public int Method1(int intMethod1)
+
+            {
+
+                return intMethod1 * 2;
+
+            }
+
+            public int Method2(int intMethod2)
+
+            {
+
+                return intMethod2 * 10;
+
+            }
+
+            public void Method3()
+
+            {
+
+                MyDelegate myDelegate = new MyDelegate(Method1);
+
+                int result1 = myDelegate(10);
+
+                System.Console.WriteLine(result1);
+
+                myDelegate = new MyDelegate(Method2);
+
+                int result2 = myDelegate(10);
+
+                System.Console.WriteLine(result2);
+
+            }
         }
     }
-}
+
+        
+
+
 
 
 
